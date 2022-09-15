@@ -67,5 +67,33 @@ void OrderOfOperations(int inputX, int inputY, int inputZ) {
 
 }
 
+
 Console.WriteLine("\n");
 OrderOfOperations(valueX, valueY, valueZ);
+
+// Step 3: "Explore integer precision and limits"
+
+
+void IntegerPrecision (int inputX, int inputY, int inputZ) {
+
+	Console.WriteLine("Input parameters:");
+		Console.WriteLine($"> x = {inputX}");
+		Console.WriteLine($"> y = {inputY}");
+		Console.WriteLine($"> z = {inputZ}");
+
+	int quotientResult = (inputX + inputY) / inputZ;
+	int remainderResult = (inputX + inputY) % inputZ;
+
+	Console.WriteLine($"For the equation ({inputX} + {inputY}) / {inputZ} :");
+		Console.WriteLine($"\tQuotient = {quotientResult}");
+		Console.WriteLine($"\tRemainder = {remainderResult}");
+
+	int upperLimit = int.MaxValue;
+	int lowerLimit = int.MinValue;
+	Console.WriteLine($"An integer literal can be any number between {lowerLimit} and {upperLimit}");
+
+	int overflowExample = upperLimit + 3;
+	Console.WriteLine($"When any value is added over the maxium integer value, an overflow occurs.")
+	Console.WriteLine($"For example: {overflowExample}")
+
+}
