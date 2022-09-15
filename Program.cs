@@ -193,3 +193,27 @@ void WorkWithDecimals (int inputX, int inputY, int inputZ) {
 
 Console.WriteLine("\n");
 WorkWithDecimals(valueX, valueY, valueZ);
+
+// Step 6: "Challenge"
+
+
+void ChallengeStep () {
+
+	Console.WriteLine("\n<< Step 6: Area of a Circle Challenge >>");
+
+	// Calculate the area of a circle for a given radius
+	double circleRadius = 2.50;
+	double circleArea = 0.0;
+
+	circleArea = (circleRadius * circleRadius) * Math.PI;
+
+	Console.WriteLine($"\nFor a circle with radius = {circleRadius}, the area = {circleArea}.");
+}
+
+Console.WriteLine("\n");
+ChallengeStep();
+
+
+Console.WriteLine("\nPress any key to exit...");
+Console.ReadKey(true);
+Environment.Exit(0);
