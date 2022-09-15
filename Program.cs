@@ -81,19 +81,63 @@ void IntegerPrecision (int inputX, int inputY, int inputZ) {
 		Console.WriteLine($"> y = {inputY}");
 		Console.WriteLine($"> z = {inputZ}");
 
+	// Return the quotient via integer division and the remainder via modulo operation
 	int quotientResult = (inputX + inputY) / inputZ;
 	int remainderResult = (inputX + inputY) % inputZ;
 
-	Console.WriteLine($"For the equation ({inputX} + {inputY}) / {inputZ} :");
-		Console.WriteLine($"\tQuotient = {quotientResult}");
-		Console.WriteLine($"\tRemainder = {remainderResult}");
+	Console.WriteLine($"\nFor the equation ({inputX} + {inputY}) / {inputZ} :");
+		Console.WriteLine($"> Quotient = {quotientResult}");
+		Console.WriteLine($"> Remainder = {remainderResult}");
 
+	// Print the maximum and minimum value allowed by an integer type
 	int upperLimit = int.MaxValue;
 	int lowerLimit = int.MinValue;
-	Console.WriteLine($"An integer literal can be any number between {lowerLimit} and {upperLimit}");
+	Console.WriteLine($"\nAn integer literal can be any number between {lowerLimit} and {upperLimit}");
 
+	// Demonstrate the overflow effect of trying to go above the upper integer limit
 	int overflowExample = upperLimit + 3;
-	Console.WriteLine($"When any value is added over the maxium integer value, an overflow occurs.")
-	Console.WriteLine($"For example: {overflowExample}")
+	Console.WriteLine($"\nWhen any value is added over the maxium integer value, an overflow occurs.");
+	Console.WriteLine($"For example > {overflowExample}");
 
 }
+
+Console.WriteLine("\n");
+IntegerPrecision(valueX, valueY, valueZ);
+
+// Step 4: "Work with the double type"
+
+
+void DoubleType (int inputX, int inputY, int inputZ) {
+
+	Console.WriteLine("Input parameters:");
+		Console.WriteLine($"> x = {inputX}");
+		Console.WriteLine($"> y = {inputY}");
+		Console.WriteLine($"> z = {inputZ}");
+
+	double doubleX = 0.0;
+	double doubleY = 0.0;
+	double doubleZ = 0.0;
+
+	// Cast the inputted integers to double
+	doubleX = (double)inputX;
+	doubleY = (double)inputY;
+	doubleZ = (double)inputZ;
+
+	Console.WriteLine("Converted input integers to double type.");
+
+	double combined = (doubleX + doubleY) / doubleZ;
+	Console.WriteLine($"\n({doubleX} + {doubleY}) / {doubleZ} = {combined}");
+
+	// Print the maximum and minimum value allowed by a double type
+	double upperLimit = double.MaxValue;
+	double lowerLimit = double.MinValue;
+	Console.WriteLine($"\nA double literal can be any number between {lowerLimit} and {upperLimit}");
+
+	double oneThird = 1.0 / 3.0;
+	Console.WriteLine("\nAn example of the precision of double arithmetic:");
+	Console.WriteLine($"{oneThird}");
+
+}
+
+Console.WriteLine("\n");
+DoubleType(valueX, valueY, valueZ);
