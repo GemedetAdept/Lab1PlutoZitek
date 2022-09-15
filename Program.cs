@@ -3,7 +3,9 @@
 
 void WorkWithIntegers(int inputX, int inputY) {
 
-	Console.WriteLine("Input parameters:");
+	Console.WriteLine("\n<< Step 1: Working With Integers >>");
+
+	Console.WriteLine("\nInput parameters:");
 		Console.WriteLine($"> x = {inputX}");
 		Console.WriteLine($"> y = {inputY}");
 
@@ -46,7 +48,9 @@ WorkWithIntegers(valueX, valueY);
 
 void OrderOfOperations(int inputX, int inputY, int inputZ) {
 
-	Console.WriteLine("Input parameters:");
+	Console.WriteLine("\n<< Step 2: Order of Operations >>");
+
+	Console.WriteLine("\nInput parameters:");
 		Console.WriteLine($"> x = {inputX}");
 		Console.WriteLine($"> y = {inputY}");
 		Console.WriteLine($"> z = {inputZ}");
@@ -76,7 +80,9 @@ OrderOfOperations(valueX, valueY, valueZ);
 
 void IntegerPrecision (int inputX, int inputY, int inputZ) {
 
-	Console.WriteLine("Input parameters:");
+	Console.WriteLine("\n<< Step 3: Integer Precision and Limits >>");
+
+	Console.WriteLine("\nInput parameters:");
 		Console.WriteLine($"> x = {inputX}");
 		Console.WriteLine($"> y = {inputY}");
 		Console.WriteLine($"> z = {inputZ}");
@@ -107,9 +113,11 @@ IntegerPrecision(valueX, valueY, valueZ);
 // Step 4: "Work with the double type"
 
 
-void DoubleType (int inputX, int inputY, int inputZ) {
+void WorkWithDoubles (int inputX, int inputY, int inputZ) {
 
-	Console.WriteLine("Input parameters:");
+	Console.WriteLine("\n<< Step 4: Working With Doubles >>");
+
+	Console.WriteLine("\nInput parameters:");
 		Console.WriteLine($"> x = {inputX}");
 		Console.WriteLine($"> y = {inputY}");
 		Console.WriteLine($"> z = {inputZ}");
@@ -123,7 +131,7 @@ void DoubleType (int inputX, int inputY, int inputZ) {
 	doubleY = (double)inputY;
 	doubleZ = (double)inputZ;
 
-	Console.WriteLine("Converted input integers to double type.");
+	Console.WriteLine("> Converted input integers to double type.");
 
 	double combined = (doubleX + doubleY) / doubleZ;
 	Console.WriteLine($"\n({doubleX} + {doubleY}) / {doubleZ} = {combined}");
@@ -140,4 +148,48 @@ void DoubleType (int inputX, int inputY, int inputZ) {
 }
 
 Console.WriteLine("\n");
-DoubleType(valueX, valueY, valueZ);
+WorkWithDoubles(valueX, valueY, valueZ);
+
+// Step 5: "Work with decimal types"
+
+
+void WorkWithDecimals (int inputX, int inputY, int inputZ) {
+
+	Console.WriteLine("\n<< Step 5: Working With Decimals >>");
+
+	Console.WriteLine("\nInput parameters:");
+		Console.WriteLine($"> x = {inputX}");
+		Console.WriteLine($"> y = {inputY}");
+		Console.WriteLine($"> z = {inputZ}");
+
+	double doubleX = 0.0;
+	double doubleY = 0.0;
+	decimal decimalZ = 0.0M;
+	decimal decimalAleph = 0.0M;
+
+	// Cast the inputted integers to double and decimal
+	doubleX = (double)inputX;
+	doubleY = (double)inputY;
+	decimalZ = (decimal)inputZ;
+	decimalAleph = (decimal)doubleX;
+
+	Console.WriteLine("> Converted input values to double and decimal types.");
+
+	// Print the maximum and minimum value allowed by a double type
+	decimal upperLimit = decimal.MaxValue;
+	decimal lowerLimit = decimal.MinValue;
+	Console.WriteLine($"\nA decimal literal can be any number between {lowerLimit} and {upperLimit}");	
+
+	Console.WriteLine("\nComparing the precision of doubles and decimals:");
+
+	double doubleComparison = doubleX / doubleY;
+	Console.WriteLine($"> Doubles: {doubleX} / {doubleY} = {doubleComparison}");
+
+	decimal decimalComparison = decimalZ / decimalAleph;
+	Console.WriteLine($"> Decimals: {decimalZ} / {decimalAleph} = {decimalComparison}");
+
+}
+
+
+Console.WriteLine("\n");
+WorkWithDecimals(valueX, valueY, valueZ);
